@@ -2,369 +2,400 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <script
       src="https://kit.fontawesome.com/0f99b745de.js"
       crossorigin="anonymous"
     ></script>
+    <script src="index.js"></script>
     <title>Library</title>
   </head>
   <body>
     <section id="landing">
       <nav>
         <div class="nav__container">
-            <div class="library__logo--container">
-        <img src="./assets/library.png" class="library__logo" />
-        </div>
-        <ul class="nav__links" >
-          <li><a href="#" class="nav__link">HOME</a></li>
-          <li><a href="#contact" class="nav__link">CONTACT</a></li>
-          <li><a href="#features" class="nav__link
-            nav__link--primary">BOOKS</a></li>
-        </ul>
-        </div>
-        <button class="btn__menu">
+          <div class="library__logo--container">
+            <img src="./assets/library.png" class="library__logo" />
+          </div>
+          <ul class="nav__links">
+            <li><a href="#" class="nav__link">HOME</a></li>
+            <li><a href="#contact" class="nav__link">CONTACT</a></li>
+            <li>
+              <a href="#features" class="nav__link nav__link--primary">BOOKS</a>
+            </li>
+          </ul>
+
+          <button class="btn__menu" onclick="openMenu()">
             <i class="fa-solid fa-bars"></i>
-        </button>
-        <div class="menu__backdrop">
-            <button class="btn__menu btn__menu--close">
-                <i class="fa-solid fa-times"></i>
+          </button>
+          <div class="menu__backdrop">
+            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+              <i class="fa-solid fa-times"></i>
             </button>
+            <ul class="menu__links">
+              <li class="menu__list">
+                <a href="#" class="menu__link" onclick="closeMenu()"> Home </a>
+              </li>
+              <li class="menu__list">
+                <a href="#features" class="menu__link" onclick="closeMenu()"> Books </a>
+              </li>
+              <li class="menu__list">
+                <a class="menu__link no-cursor" onclick="closeMenu()"> Contact </a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </nav>
+      </nav>
       <header>
         <div class="header__container">
-            <div class="header__description">
-                <h1>America's most awarded online children's library platform</h1>
-                <h2>Find your dream book with <span class="orange"> Library</span></h2>
-                <a href="#features"><button class="btn">Browse Books</button></a>
-            </div>
-            <figure class="header__img--wrapper">
-                <img class="header__img" src="./assets/reading.png" alt="undraw books svg">
-            </figure>
+          <div class="header__description">
+            <h1>America's most awarded online kid's library platform</h1>
+            <h2>
+              Find your dream book with <span class="orange"> Library</span>
+            </h2>
+            <a href="#features"><button class="btn">Browse Books</button></a>
+          </div>
+          <figure class="header__img--wrapper">
+            <img
+              class="header__img"
+              src="./assets/reading.png"
+              alt="undraw books svg"
+            />
+          </figure>
         </div>
       </header>
     </section>
     <main>
-<section id="highlights">
+      <section id="highlights">
         <div class="container">
-            <div class="row">
-                <h2 class="section__title">
-                    Why <span class="orange">Library</span>
-                </h2>
-                <div class="highlight__wrapper">
-                    <div class="highlight">
-                        <div class="highlight__img">
-                            <i class="fa-solid fa-bolt"></i>
-                        </div>                           
-                            <h3 class="highlight__subtitle">
-                                Easy and Quick
-                            </h3>
-                            <p class="highlight__para">
-                                Get access to the book you purchased online instantly.
-                            </p>
-                    </div>
-                    <div class="highlight">
-                        <div class="highlight__img">
-                            <i class="fa-solid fa-book-open" ></i>
-                            </div>
-                            <h3 class="highlight__subtitle">
-                                10,000+ Books
-                            </h3>
-                            <p class="highlight__para">
-                                Library has books on numerous topics.
-                            </p>
-                        
-                    </div>
-                    <div class="highlight">
-                        <div class="highlight__img">
-                            <i class="fa-solid fa-tags" ></i>
-                            </div>
-                            <h3 class="highlight__subtitle">
-                                Affordable
-                            </h3>
-                            <p class="highlight__para">
-                                Get your hands on popular books for a little a $10.
-                            </p>
-                        
-                    </div>
+          <div class="row">
+            <h2 class="section__title">
+              Why <span class="orange">Library</span>
+            </h2>
+            <div class="highlight__wrapper">
+              <div class="highlight">
+                <div class="highlight__img">
+                  <i class="fa-solid fa-bolt"></i>
                 </div>
+                <h3 class="highlight__subtitle">Easy and Quick</h3>
+                <p class="highlight__para">
+                  Get access to the book you purchased online instantly.
+                </p>
+              </div>
+              <div class="highlight">
+                <div class="highlight__img">
+                  <i class="fa-solid fa-book-open"></i>
+                </div>
+                <h3 class="highlight__subtitle">10,000+ Books</h3>
+                <p class="highlight__para">
+                  Library has books on numerous topics.
+                </p>
+              </div>
+              <div class="highlight">
+                <div class="highlight__img">
+                  <i class="fa-solid fa-tags"></i>
+                </div>
+                <h3 class="highlight__subtitle">Affordable</h3>
+                <p class="highlight__para">
+                  Get your hands on popular books for a little a $10.
+                </p>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
-        <section id="features">
-            <div class="container">
-                <div class="row">
-                    <h2 class="section__title">
-                        Featured <span class="orange">Books</span>
-                    </h2>
-                    <div class="books">
-                        <div class="book">
-                            <figure class="book__img--wrapper">
-                                <img class="book__img book__img--coding" src="./assets/coding.jpeg" alt="">
-                            </figure>
-                            <div class="book__title">
-                                My First Coding Book
-                            </div>
-                            <div class="book__ratings">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-alt"></i>
-                            </div>
-                            <div class="book__price">
-                                <span class="book__price--normal">$19.95</span> $4.95
-                            </div>
-                        </div>
-                        <div class="book">
-                            <figure class="book__img--wrapper">
-                                <img class="book__img" src="./assets/popular science.jpg" alt="">
-                            </figure>
-                            <div class="book__title">
-                                The Giant Book of Why What When Where How & Who
-                            </div>
-                            <div class="book__ratings">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-alt"></i>
-                            </div>
-                            <div class="book__price">
-                                <span class="book__price--normal">$19.95</span> $4.95
-                            </div>
-                        </div>
-                        <div class="book">
-                            <figure class="book__img--wrapper">
-                                <img class="book__img
-                                book__img--astronomy" src="./assets/astronomy.jpg" alt="">
-                            </figure>
-                            <div class="book__title">
-                                The Everything Kids' Astronomy Book
-                            </div>
-                            <div class="book__ratings">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-alt"></i>
-                            </div>
-                            <div class="book__price">
-                                <span class="book__price--normal">$19.95</span> $4.95
-                            </div>
-                        </div>
-                        <div class="book">
-                            <figure class="book__img--wrapper">
-                                <img class="book__img" src="./assets/wimpy kid.webp" alt="">
-                            </figure>
-                            <div class="book__title">
-                                Diary of a Wimpy Kid
-                            </div>
-                            <div class="book__ratings">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-alt"></i>
-                            </div>
-                            <div class="book__price">
-                                <span class="book__price--normal">$19.95</span> $4.95
-                            </div>
-                        </div>
-                        <div class="book">
-                            <figure class="book__img--wrapper">
-                                <img class="book__img" src="./assets/rainbows.jpg" alt="">
-                            </figure>
-                            <div class="book__title">
-                                Can You Get Rainbows in Space?
-                            </div>
-                            <div class="book__ratings">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-alt"></i>
-                            </div>
-                            <div class="book__price">
-                                <span class="book__price--normal">$19.95</span> $4.95
-                            </div>
-                        </div>
-                        <div class="book">
-                            <figure class="book__img--wrapper">
-                                <img class="book__img" src="./assets/cat_in_the_hat.jpeg" alt="">
-                            </figure>
-                            <div class="book__title">
-                                Cat in The Hat
-                            </div>
-                            <div class="book__ratings">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-alt"></i>
-                            </div>
-                            <div class="book__price">
-                                <span class="book__price--normal">$19.95</span> $4.95
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="recent">
-            <div class="container">
-                <div class="row">
-                    <h2 class="section__title">
-                        Latest <span class="orange">Books</span>
-                    </h2>
-                    <div class="books">
-                        <div class="book">
-                            <figure class="book__img--wrapper">
-                                <img class="book__img" src="./assets/cat_in_the_hat.jpeg" alt="">
-                            </figure>
-                            <div class="book__title">
-                                Cat in The Hat
-                            </div>
-                            <div class="book__ratings">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-alt"></i>
-                            </div>
-                            <div class="book__price">
-                                <span class="book__price--normal">$19.95</span> $4.95
-                            </div>
-                        </div>
-                        <div class="book">
-                            <figure class="book__img--wrapper">
-                                <img class="book__img" src="./assets/cat_comes_back.jpg" alt="">
-                            </figure>
-                            <div class="book__title">
-                                The Cat in The Hat Comes Back
-                            </div>
-                            <div class="book__ratings">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-alt"></i>
-                            </div>
-                            <div class="book__price">
-                                <span class="book__price--normal">$19.95</span> $4.95
-                            </div>
-                        </div>
-                        <div class="book">
-                            <figure class="book__img--wrapper">
-                                <img class="book__img" src="./assets/pippi.jpg" alt="">
-                            </figure>
-                            <div class="book__title">
-                                Pippi Longstocking
-                            </div>
-                            <div class="book__ratings">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-alt"></i>
-                            </div>
-                            <div class="book__price">
-                                <span class="book__price--normal">$19.95</span> $4.95
-                            </div>
-                        </div>
-                        <div class="book">
-                            <figure class="book__img--wrapper">
-                                <img class="book__img" src="./assets/chicken_soup.jpg" alt="">
-                            </figure>
-                            <div class="book__title">
-                                Chicken Soup for the Kid's Soul
-                            </div>
-                            <div class="book__ratings">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-alt"></i>
-                            </div>
-                            <div class="book__price">
-                                <span class="book__price--normal">$19.95</span> $4.95
-                            </div>
-                        </div>
-                        <div class="book">
-                            <figure class="book__img--wrapper">
-                                <img class="book__img" src="./assets/cat_in_the_hat.jpeg" alt="">
-                            </figure>
-                            <div class="book__title">
-                                Cat and The Hat
-                            </div>
-                            <div class="book__ratings">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-alt"></i>
-                            </div>
-                            <div class="book__price">
-                                <span class="book__price--normal">$19.95</span> $4.95
-                            </div>
-                        </div>
-                        <div class="book">
-                            <figure class="book__img--wrapper">
-                                <img class="book__img" src="./assets/cat_in_the_hat.jpeg" alt="">
-                            </figure>
-                            <div class="book__title">
-                                Cat and The Hat
-                            </div>
-                            <div class="book__ratings">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-alt"></i>
-                            </div>
-                            <div class="book__price">
-                                <span class="book__price--normal">$19.95</span> $4.95
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="explore">
-            <div class="container">
-                <div class="row">
-                    <h2 class="section__title">
-                        Explore more <span class="orange">Books</span>
-                    </h1>
-                    <div class="button__container">
-                    <a href="#features"><button class="btn">Browse Books</button>
-                    </a></div>
-                </div>
-            </div>
-        </section>
-    </main>
-  
-    <footer>
+      </section>
+      <section id="features">
         <div class="container">
-            <div class="row row__column">
-                <a href="#">
-                <figure class="footer__logo">
-                    <span class="footer__span">To the Top ↑</span>
-                    <img src="./assets/library.png" alt="" class="footer__logo--img">
+          <div class="row">
+            <h2 class="section__title">
+              Featured <span class="orange">Books</span>
+            </h2>
+            <div class="books">
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img
+                    class="book__img book__img--coding"
+                    src="./assets/coding.jpeg"
+                    alt=""
+                  />
                 </figure>
-                </a>
-                <div class="footer__list">
-                    <a href="#" class="footer__link">Home</a>
-                    <a href="" class="footer__link no-cursor">About</a>
-                    <a href="#features" class="footer__link">Books</a>
-                    <a href="" class="footer__link no-cursor last__link">Contact</a>
+                <div class="book__title">My First Coding Book</div>
+                <div class="book__ratings">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-alt"></i>
                 </div>
-                <div class="footer__copyright">Copyright &copy; 2026 Library</div>
+                <div class="book__price">
+                  <span class="book__price--normal">$19.95</span> $4.95
+                </div>
+              </div>
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img
+                    class="book__img"
+                    src="./assets/popular science.jpg"
+                    alt=""
+                  />
+                </figure>
+                <div class="book__title">
+                  The Giant Book of Why What When Where How & Who
+                </div>
+                <div class="book__ratings">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-alt"></i>
+                </div>
+                <div class="book__price">
+                  <span class="book__price--normal">$19.95</span> $4.95
+                </div>
+              </div>
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img
+                    class="book__img book__img--astronomy"
+                    src="./assets/astronomy.jpg"
+                    alt=""
+                  />
+                </figure>
+                <div class="book__title">
+                  The Everything Kids' Astronomy Book
+                </div>
+                <div class="book__ratings">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-alt"></i>
+                </div>
+                <div class="book__price">
+                  <span class="book__price--normal">$19.95</span> $4.95
+                </div>
+              </div>
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img class="book__img" src="./assets/wimpy kid.webp" alt="" />
+                </figure>
+                <div class="book__title">Diary of a Wimpy Kid</div>
+                <div class="book__ratings">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-alt"></i>
+                </div>
+                <div class="book__price">
+                  <span class="book__price--normal">$19.95</span> $4.95
+                </div>
+              </div>
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img class="book__img" src="./assets/rainbows.jpg" alt="" />
+                </figure>
+                <div class="book__title">Can You Get Rainbows in Space?</div>
+                <div class="book__ratings">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-alt"></i>
+                </div>
+                <div class="book__price">
+                  <span class="book__price--normal">$19.95</span> $4.95
+                </div>
+              </div>
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img
+                    class="book__img"
+                    src="./assets/cat_in_the_hat.jpeg"
+                    alt=""
+                  />
+                </figure>
+                <div class="book__title">Cat in The Hat</div>
+                <div class="book__ratings">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-alt"></i>
+                </div>
+                <div class="book__price">
+                  <span class="book__price--normal">$19.95</span> $4.95
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </section>
+      <section id="recent">
+        <div class="container">
+          <div class="row">
+            <h2 class="section__title">
+              Latest <span class="orange">Books</span>
+            </h2>
+            <div class="books">
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img
+                    class="book__img"
+                    src="./assets/cat_in_the_hat.jpeg"
+                    alt=""
+                  />
+                </figure>
+                <div class="book__title">Cat in The Hat</div>
+                <div class="book__ratings">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-alt"></i>
+                </div>
+                <div class="book__price">
+                  <span class="book__price--normal">$19.95</span> $4.95
+                </div>
+              </div>
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img
+                    class="book__img"
+                    src="./assets/cat_comes_back.jpg"
+                    alt=""
+                  />
+                </figure>
+                <div class="book__title">The Cat in The Hat Comes Back</div>
+                <div class="book__ratings">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-alt"></i>
+                </div>
+                <div class="book__price">
+                  <span class="book__price--normal">$19.95</span> $4.95
+                </div>
+              </div>
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img class="book__img" src="./assets/pippi.jpg" alt="" />
+                </figure>
+                <div class="book__title">Pippi Longstocking</div>
+                <div class="book__ratings">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-alt"></i>
+                </div>
+                <div class="book__price">
+                  <span class="book__price--normal">$19.95</span> $4.95
+                </div>
+              </div>
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img
+                    class="book__img"
+                    src="./assets/chicken_soup.jpg"
+                    alt=""
+                  />
+                </figure>
+                <div class="book__title">Chicken Soup for the Kid's Soul</div>
+                <div class="book__ratings">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-alt"></i>
+                </div>
+                <div class="book__price">
+                  <span class="book__price--normal">$19.95</span> $4.95
+                </div>
+              </div>
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img
+                    class="book__img"
+                    src="./assets/cat_in_the_hat.jpeg"
+                    alt=""
+                  />
+                </figure>
+                <div class="book__title">Cat and The Hat</div>
+                <div class="book__ratings">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-alt"></i>
+                </div>
+                <div class="book__price">
+                  <span class="book__price--normal">$19.95</span> $4.95
+                </div>
+              </div>
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img
+                    class="book__img"
+                    src="./assets/cat_in_the_hat.jpeg"
+                    alt=""
+                  />
+                </figure>
+                <div class="book__title">Cat and The Hat</div>
+                <div class="book__ratings">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-alt"></i>
+                </div>
+                <div class="book__price">
+                  <span class="book__price--normal">$19.95</span> $4.95
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="explore">
+        <div class="container">
+          <div class="row">
+            <h2 class="section__title">
+              Explore more <span class="orange">Books</span>
+            </h2>
+            <div class="button__container">
+              <a href="#features"><button class="btn">Browse Books</button> </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="row row__column">
+          <a href="#" class="footer__anchor">
+            <figure class="footer__logo">
+              <span class="footer__logo--popper">To the Top ↑</span>
+              <img
+                src="./assets/library.png"
+                alt=""
+                class="footer__logo--img"
+              />
+            </figure>
+          </a>
+          <div class="footer__list">
+            <a href="#" class="footer__link">Home</a>
+            <a href="" class="footer__link no-cursor">About</a>
+            <a href="#features" class="footer__link">Books</a>
+            <a href="" class="footer__link no-cursor last__link">Contact</a>
+          </div>
+          <div class="footer__copyright">Copyright &copy; 2026 Library</div>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

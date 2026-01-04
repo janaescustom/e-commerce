@@ -87,13 +87,80 @@ li {
     text-decoration: none;
 }
 
+.btn__menu {
+    background-color: transparent;
+    font-size: 40px;
+    text-align: center;
+    border: none;
+    color: #ffb22f;
+    display: none;
+}
+
+.menu__backdrop {
+    position: absolute;
+    background-color: #229883f0;
+    top: 0;
+    left: 0;
+    right: 0;   
+    bottom: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.menu--open .menu__backdrop {
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu--open {
+    max-height: 100vh;
+    overflow-y: hidden;
+}
+
+.menu__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu__list {
+    padding: 32px 0;
+}
+.menu__link {
+    font-size: 40px;
+    color: #ffb22f;
+}
+
+.btn__menu--close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 8px;
+    color: white;
+}
+
+
+/*
+Landing
+*/
+
 #landing {
     background-color: #ac77fb1f;
 }
 
+
+/*
+
 header {
     height: calc(100vh - 80px);
 }
+
+*/
 
 .header__container {
     width: 100%;
@@ -150,9 +217,19 @@ button:active {
 }
 
 .header__img--wrapper {
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     z-index: 5;
 }
+
+
+
+
+.header__img {
+    max-height: 70vh;
+    object-fit: scale-down;
+}
+
+
 
 .container {
     padding: 56px 0;
@@ -328,7 +405,7 @@ button:active {
 /*FOOTER*/
 
 footer {
-    background-color: #4466f930;
+    background-color: #2298837d;
 }
 
 .footer__logo {
@@ -344,8 +421,6 @@ footer {
     color: white;
 }
 
-
-
 .footer__list {
     margin: 24px;
 }
@@ -356,4 +431,51 @@ footer {
 
 .last__link {
     margin-right: 0;
+}
+
+.footer__logo--popper {
+    position: absolute;
+    left: 25%;
+    top: 30px;
+    font-weight: bold;
+    opacity: 0;
+    transition: all 300ms ease;
+}
+
+.footer__anchor {
+    position: relative;
+    color: white;
+}
+
+.footer__anchor:hover .footer__logo--popper {
+    transform: translateY(-40px);
+    opacity: 1;
+}
+
+
+
+@media (max-width: 1200px) {
+    .book {
+        width: calc(100% / 3);
+    }
+    
+}
+
+
+@media (max-width: 768px) {
+    .book {
+        width: 50%;
+    }
+    
+}
+
+@media (max-width: 620px) {
+    .nav__links {
+        display: none;
+    }
+
+    .btn__menu {
+        display: block;
+    }
+    
 }
